@@ -1,0 +1,63 @@
+\begin{thebibliography}{1}
+
+\bibitem{web6}
+Arduino Docs.
+\newblock Nano 33 ble sense cheat sheet.
+\newblock Arduino Docs,
+  \url{https://docs.arduino.cc/tutorials/nano-33-ble-sense/cheat-sheet/},
+  febrero 2024.
+\newblock Accedido en febrero de 2024.
+
+\bibitem{web}
+Nordic Infocenter.
+\newblock nrf52840 datasheet.
+\newblock Nordic Infocenter,
+  \url{https://infocenter.nordicsemi.com/pdf/nRF52840_PS_v1.1.pdf}, Mayo 2019.
+\newblock Accedido en febrero de 2024.
+
+\bibitem{web2}
+Arduino Docs.
+\newblock Arduino nano 33 ble.
+\newblock Arduino Docs,
+  \url{https://docs.arduino.cc/resources/datasheets/ABX00030-datasheet.pdf},
+  Mayo 2019.
+\newblock Accedido en febrero de 2024.
+
+\bibitem{ArduinoMega}
+Arduino Docs.
+\newblock Mega 2560 rev3.
+\newblock Arduino Docs,
+  \url{https://docs.arduino.cc/hardware/mega-2560/#tech-specs}, Febrero 2024.
+\newblock Accedido en febrero de 2024.
+
+\bibitem{web5}
+Edge Impulse.
+\newblock Responding to your voice.
+\newblock Edge impulse,
+  \url{https://docs.edgeimpulse.com/docs/tutorials/end-to-end-tutorials/responding-to-your-voice},
+  noviembre 2023.
+\newblock Accedido en febrero de 2024.
+
+\bibitem{web8}
+Texas Instruments.
+\newblock Pcf8574 remote 8-bit.
+\newblock Texas Instruments,
+  \url{https://www.ti.com/lit/ds/symlink/pcf8574.pdf?ts=1638973422078&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FPCF8574%253Futm_source%253Dgoogle%2526utm_medium%253Dcpc%2526utm_campaign%253Dasc-int-null-prodfolderdynamic-cpc-pf-google-wwe%2526utm_content%253Dprodfolddynamic%2526ds_k%253DDYNAMIC%2BSEARCH%2BADS%2526DCM%253Dyes%2526gclsrc%253Dds%2526gclsrc%253Dds},
+  abril 2015.
+\newblock Accedido en febrero de 2024.
+
+\bibitem{web10}
+JSCC07183.
+\newblock Iparte-proyectoie0624.
+\newblock , \url{https://studio.edgeimpulse.com/studio/348181}, febrero 2024.
+\newblock Accedido en febrero de 2024.
+
+\bibitem{web9}
+Universidad de~Sevilla.
+\newblock 3 extraccion de caracteristicas.
+\newblock Universidad de Sevilla,
+  \url{https://biblus.us.es/bibing/proyectos/abreproy/12054/fichero/MEMORIA%252F8.Cap%C3%ADtulo+3.pdf},
+  junio 2017.
+\newblock Accedido en febrero de 2024.
+
+\end{thebibliography}

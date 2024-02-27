@@ -1,0 +1,30 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Ubicación del micrófono. Tomado de \cite {web6}.}}{3}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Diagrama de bloques del Nano BLE 33 Sense . Tomado de \cite {web}.}}{4}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Diagrama de pines del Nano BLE 33 Sense . Tomado de \cite {web2}.}}{5}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Características eléctricas de nRF52480. Tomado de \cite {web}.}}{5}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Características eléctricas de la placa. Tomado de \cite {web2}.}}{5}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Diagrama de bloques del arduino mega 2560 REV3 \cite {ArduinoMega}.}}{6}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Diagrama de pines del arduino mega 2560 REV3 \cite {ArduinoMega}.}}{7}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Condiciones de operación del arduino mega 2560 REV3 \cite {ArduinoMega}.}}{7}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Keypad}}{8}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Módulo I2C.}}{8}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Pantalla lcd.}}{9}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Servomotor.}}{9}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Habilitación de \SI {5}{\volt }.}}{10}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama de bloques smart door lock.}}{11}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Conjunto de datos.}}{12}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Espectro señal abrir.}}{12}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Espectro señal cierra.}}{12}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Espectro del ruido.}}{13}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Espectro de sonido desconocido.}}{13}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Clasificación de los datos.}}{13}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Resultado fina del entrenamiento.}}{14}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Reconocimiento de la palabra abrir.}}{14}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Reconocimiento de la palabra cierra.}}{14}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Accionamiento del servo con la palabra abrir.}}{15}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Accionamiento del servo con la palabra cierra.}}{15}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Funcionamiento completo con la palabra abrir.}}{15}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Funcionamiento completo con la palabra cierra.}}{15}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Cerradura final ensamblado parte frontal.}}{16}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Cerradura final ensamblado parte trasera.}}{17}{figure.29}%

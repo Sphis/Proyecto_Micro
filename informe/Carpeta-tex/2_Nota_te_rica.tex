@@ -1,0 +1,195 @@
+\section{Nota teórica}
+\subsection*{Arduino Nano 33 Ble Sense}
+El arduino Nano 33 BLE Sense es un módulo miniatura que contiene un módulo NINA B306, basado en Nordic nRF52480 y contiene un M4F Cortex, un cripto chip el cual puede almacenar certificados de forma segura y pre-compartir llaves y un IMU de 9 ejes. El módulo puede ser montado como un componente DIP o como componente SMT, directamente soldado por la vía de los pads. Es importante mencionar que la parte de TinyML forma parte de este proyecto, ya que implica reconocimiento de voz, por tanto, hay entrenamiento previo con la grabación de las acciones que se desean realizar, es decir, abrir y cerrar más dos complementos adicionales como sonidos desconocidos y ruido esto porque un modelo de ML no tiene idea sobre las cosas que están bien o mal, y solo aprende con los datos que se le dan, en ese sentido, entre más variado sean los datos, el modelo trabajará mejor \cite{web5}. Ahora, también es importante mencionar que la librería PDM y el sensor MP34DT05 ayudaron a la captura de las muestras esto porque los micrófonos se encargan de hacer la conversión de de sonidos en datos digitales.
+\begin{figure}[H]
+\centering
+\includegraphics[width=.55\linewidth]{Img/Nano33_ble_sense_microphone.png}
+ \caption{Ubicación del micrófono. Tomado de \cite{web6}.}
+ \label{fig_micro}
+\end{figure}
+
+
+\subsubsection*{Características generales}
+Las características más importantes de este mcu se mencionan a continuación \cite{web}
+\begin{multicols}{2}
+ \begin{itemize}
+    \item CPU: ARM Cortex-M4 a 64MHz con FPU, 32-bit, 1MB Flash, 256kB SRAM.
+    \item Bluetooth 5, IEEE 802.15.4-2006, \SI{2.4}{\giga\Hz}.
+    \item ARM TrusZone Cryptocell 310 security subsystem, secure boot.
+    \item USB 2.0, QSPI, SPI.
+    \item 48 GPIOs.
+    \item 12-bit, ADC con 8 canales.
+    \item 64 comparadores de nivel, 15 del tipo low-power.
+    \item Sensor de temperatura.
+    \item $4\times4$-canales PWM.
+    \item Periféricos de audio: I2S, PDM
+    \item $5\times32$-bit timers.
+    \item $4\times$ SPI maestros\/$3\times$ SPI esclavos.
+    \item $2\times$I2C.
+    \item $2\times$ UART.
+    \item decodificador de cuadratura (QDEC).
+    \item $3\times$ RTC.
+\end{itemize}   
+\end{multicols}
+
+\subsubsection*{Diagrama de bloques}
+La figura \ref{fig1} representa el diagrama de bloques de la placa.
+\begin{figure}[H]
+\centering
+\includegraphics[width=.55\linewidth]{Img/1.png}
+ \caption{Diagrama de bloques del Nano BLE 33 Sense . Tomado de \cite{web}.}
+ \label{fig1} 
+\end{figure}
+\newpage
+\subsubsection*{Diagrama de pines}
+El diagrama de la figura \ref{fig2} brinda de manera más detallada la distribución de los pines.
+\begin{figure}[H]
+\centering
+\includegraphics[width=.55\linewidth]{Img/2.png}
+ \caption{Diagrama de pines del Nano BLE 33 Sense . Tomado de \cite{web2}.}
+ \label{fig2}
+\end{figure}
+
+\subsubsection*{Características eléctricas}
+Aquí se tomaron dos referencias para tener más claro este detalle,  primero se muestran los valores máximos del mcu nRF52480 y los de la placa respectivamente.
+\begin{figure}[H]
+\centering
+\includegraphics[width=.55\linewidth]{Img/3.png}
+ \caption{Características eléctricas de nRF52480. Tomado de \cite{web}.}
+ \label{fig3}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.55\linewidth]{Img/3.1.png}
+ \caption{ Características eléctricas de la placa. Tomado de \cite{web2}.}
+ \label{fig3.1}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Arduino Atmega
+\subsection*{Arduino Mega 2560 Rev3}
+El verdadero MCU utilizado es el elegoo MEGA 2560 R3, sin embargo comparte las mismas características que el arduino, la documentación de esta última está más depurada es por esta razón que fue la que se tomó como base.
+
+\subsubsection{Características generales}
+Las características generales de este MCU se describe a continuación \cite{ArduinoMega}:
+\begin{itemize}
+    \item Rendimiento de hasta 16 MIPS a 16 MHz
+    \item 256k bytes (de los cuales 8k se utilizan para el cargador de arranque)
+    \item 4k bytes EEPROM
+    \item 8k bytes de SRAM interna
+    \item 32 × 8 registros de trabajo de propósito general
+    \item Contador en tiempo real con oscilador separado
+    \item Cuatro canales PWM de 8 bits
+    \item Cuatro USART serie programables
+    \item Interfaz serie SPI controladora/periférica
+\end{itemize}
+
+\subsubsection{Diagrama de bloques}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.6\linewidth]{Img/k1.png}
+    \caption{ Diagrama de bloques del arduino mega 2560 REV3 \cite{ArduinoMega}.}
+\end{figure}
+
+\subsubsection{Diagrama de pines}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.6\linewidth]{Img/k2.png}
+    \caption{ Diagrama de pines del arduino mega 2560 REV3 \cite{ArduinoMega}.}
+\end{figure}
+
+\subsubsection{Características eléctricas}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.6\linewidth]{Img/k3.png}
+    \caption{ Condiciones de operación del arduino mega 2560 REV3 \cite{ArduinoMega}.}
+\end{figure}
+
+\subsection*{Periféricos utilizados}
+Los principales periféricos para este proyecto fueron el módulo I2C y el sensor MP34DT05.\par
+% Escribir algo de teoría de I2C.
+La idea de usar este módulo es incorporarlo con la pantalla lcd porque facilita la conexión con el arduino Mega2560 por lo que solo basta con conectar los pines \texttt{GND},\texttt{VCC},\texttt{SDA} y \texttt{SCL} de la figura \ref{fig_i2c}, donde los dos últimos tienen que ver los datos seriales y el reloj. Donde una condición de parada: alto-bajo corresponde a la transición SDA (I/O) mientras que SCL está en alto y es enviada por el \texttt{master}. Otro detalle es que estos pines necesitan resistencias de pull-up apropiadas y tomar en consideración la capacitancia total de todos los esclavos del bus I$^2$C. Los dos primeros pines se trata de una conexión básica, fuente a tierra y la alimentación del módulo que esto va conectado con los \SI{5}{\volt} del arduino Mega2560 \cite{web8}.\par
+Por otro lado, el sensor MP34DT05 es un micrófono ultra-compacto que usa PDM (modulación densidad de pulso) para representar una señal analógica como una señal binaria. El rango del sensor posee diferentes valores:
+\begin{itemize}
+    \item Radio señal de ruido: \SI{64}{\dB}.
+    \item Sensibilidad: $-26\text{dBFS} \pm \SI{3}{\dB} $
+    \item Rango de temperatura: -40 a $\SI{85}{\celsius}$
+\end{itemize}
+
+\subsection*{Componentes electrónicos complementarios}
+En función de cumplir con los objetivos del proyecto los siguientes componentes fueron de gran ayuda para cumplirlos.
+\subsubsection*{Keypad}
+La función del Keypad es para escribir la clave que se mostrará en la pantalla lcd.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.4\linewidth]{Img/keypad.jpg}
+    \caption{Keypad}
+    \label{fig_keypad}
+\end{figure}
+\subsubsection*{Módulo I2C}
+Este componente es sumamente importante porque se incorpora a la pantalla lcd para establecer la comunicación con el microcontrolador y luego con el keypad.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.4\linewidth]{Img/i2c.jpg}
+    \caption{Módulo I2C.}
+    \label{fig_i2c}
+\end{figure}
+\subsubsection*{Pantalla lcd}
+Su tarea es mostrar la entrada del usuario, si escribe la contraseña correcta o incorrecta se mostrará un mensaje en la pantalla.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.4\linewidth]{Img/lcd.jpg}
+    \caption{Pantalla lcd.}
+    \label{fig_lcd}
+\end{figure}
+\subsubsection*{Servomotor}
+Este componente se encarga de abrir o cerrar la puerta dependiendo de dos aspectos. El primero es con la clave escrita en el keypad y lo segundo con base a las palabras claves: \textit{abrir} o \textit{cierra}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.4\linewidth]{Img/servo.jpg}
+    \caption{Servomotor.}
+    \label{fig_servo}
+\end{figure}
+Ahora, por medio de muchas pruebas realizadas se determinó que no fue posible trabajar solo con el Arduino Nano 33 Ble Sense ya que se determinó en el laboratorio que el pin de \SI{5}{\volt} no funcionaba porque mostraba una salida de \SI{5}{\volt}. El otro problema que se mostró fue a la hora de hacer la conexión con el keypad porque a la hora de presionar cualquier botón por medio del monitor serial se estaban reconociendo caracteres completamente desconocidos, ante esto se diseñó un filtro RC en la salida, esto para las pulsaciones, sin embargo, el problema persistía. El otro problema es con la pantalla lcd, ella necesita una alimentación de al menos \SI{5}{\volt}, en ese sentido debe estar conectada a un pin que posee esa salida, de lo contrario muestra un bajo contraste y no se puede apreciar correctamente el contenido, para solucionar este problema pudo haberse hecho un par Darlington o realizar lo mostrado en la figura \ref{fig_usb}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.4\linewidth]{Img/pin_vusb.png}
+    \caption{Habilitación de \SI{5}{\volt}.}
+    \label{fig_usb}
+\end{figure}
+No obstante, por cuestiones de tiempo y complejidad en ese tipo de soldadura especial/fina no se tomaron esos caminos. Ante todos estas situaciones lo más favorable fue hacer uso de otra placa para realizar estas conexiones. Entonces, el proyecto tiene dos etapas:
+\begin{itemize}
+    \item La placa Arduino MEGA2560, se encarga de abrir y cerrar la puerta por medio del keypad cuando se le escribe la contraseña correcta y controlar el display.
+    \item La placa Arduino Nano 33 Ble Sense fue entrenada con 4 clases; dos keywords (abrir/cerrar) y otras dos con ruido y sonidos desconocidos. Así, cuando reconozca alguna de las palabras claves se abrirá o cerrará la puerta y encenderá un LED dependiendo del estado.
+\end{itemize}
+
+% TABLA DE COMPONENTES
+\begin{table}[H]
+\caption{Lista de equipos}
+\label{table_2}
+\begin{center}
+\begin{tabular}{r|cc}
+\hline
+\textbf{Componente}&\textbf{Cantidad}&\textbf{Precio}\\
+ \hline
+Arduino Nano 33 Ble Sense& 1 &60\$ \\ \hline 
+Arduino Mega2560& 1 & 18\$ \\ \hline 
+Keypad& 1 &9\$ \\ \hline 
+Pantalla lcd& 1 &6.95\$ \\ \hline 
+Servomotor& 2 &11\$ \\ \hline 
+Batería \SI{9}{\volt}& 1 &5.5\$ \\ \hline 
+Kit de resistencias& 1 & 0.2\$ \\ \hline 
+Kit de jumpers & 1 &2 \$ \\ \hline 
+Módulo I2C & 1 & 4\$ \\ \hline 
+
+ \textbf{Total}& & 117\$ \\
+ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection*{Diseño del circuito}
+\input{sch}
+El diagrama mostrado anteriormente es la lógica que posee el proyecto en general. Gracias a este esquema, desde un inicio se tuvo claro los objetivos a cumplir.
+%\newpage
